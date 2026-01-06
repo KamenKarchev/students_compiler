@@ -1,0 +1,17 @@
+program {
+    main() -> void {
+        int[] arr = int[10];
+        int i = 0;
+        while (i < 10) {
+            arr[i] = i + 1; // sample data 1..10
+            i = i + 1;
+        }
+        int sum = 0;
+        i = 0;
+        while (i < 10) {
+            sum = sum + arr[i];
+            i = i + 1;
+        }
+        print("Sum of array =", sum);
+    }
+}

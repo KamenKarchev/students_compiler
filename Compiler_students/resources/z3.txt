@@ -1,0 +1,15 @@
+program {
+    factorialIter(int n) -> int {
+        int res = 1;
+        while (n > 1) {
+            res = res * n;
+            n = n - 1;
+        }
+        return res;
+    }
+
+    main() -> void {
+        int n = 5;
+        print("n =", n, "fact(iter) =", @factorialIter(n));
+    }
+}

@@ -1,0 +1,31 @@
+program {
+    main() -> void {
+        int[] arr = int[10];
+        int i = 0;
+        while (i < 10) {
+            arr[i] = 10 - i; // sample data reversed
+            i = i + 1;
+        }
+
+        int n = 10;
+        int pass = 0;
+        while (pass < n - 1) {
+            int j = 0;
+            while (j < n - 1 - pass) {
+                if (arr[j] > arr[j + 1]) {
+                    int tmp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = tmp;
+                }
+                j = j + 1;
+            }
+            pass = pass + 1;
+        }
+
+        i = 0;
+        while (i < 10) {
+            print("arr[", i, "] =", arr[i]);
+            i = i + 1;
+        }
+    }
+}

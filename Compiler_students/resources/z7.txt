@@ -1,0 +1,29 @@
+program {
+    main() -> void {
+        int[] arr = int[10];
+        int i = 0;
+        while (i < 10) {
+            arr[i] = i * 2; // sample data even numbers
+            i = i + 1;
+        }
+
+        int target = 0;
+        print("Enter number to search:");
+        read(target);
+
+        int found = 0;
+        i = 0;
+        while (i < 10) {
+            if (arr[i] == target) {
+                found = 1;
+            }
+            i = i + 1;
+        }
+
+        if (found == 1) {
+            print("Found", target);
+        } else {
+            print("Not found", target);
+        }
+    }
+}
